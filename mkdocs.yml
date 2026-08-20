@@ -1,0 +1,90 @@
+site_name: 面试准备
+site_description: Cloud Native、Kubernetes Platform 与 AI Infra 面试知识库
+site_dir: site
+docs_dir: docs
+use_directory_urls: true
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light-blue
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mermaid.mjs
+
+nav:
+  - 首页: index.md
+  - 项目说明:
+      - 图表资源约定: assets/diagrams/README.md
+  - 00 面试地图与复习进度: 00-roadmap-progress/README.md
+  - 01 数据结构与算法: 01-algorithm/README.md
+  - 02 Go: 02-go/README.md
+  - 03 操作系统与 Linux Kernel: 03-linux-kernel/README.md
+  - 04 Linux Networking: 04-linux-networking/README.md
+  - 05 eBPF / XDP: 05-ebpf-xdp/README.md
+  - 06 Container Runtime: 06-container-runtime/README.md
+  - 07 Kubernetes Core: 07-kubernetes-core/README.md
+  - 08 Kubernetes Interfaces: 08-kubernetes-interfaces/README.md
+  - 09 Kubernetes Development: 09-kubernetes-development/README.md
+  - 10 Kubernetes Networking: 10-kubernetes-networking/README.md
+  - 11 Storage: 11-storage/README.md
+  - 12 Cloud Native Ecosystem: 12-cloud-native-ecosystem/README.md
+  - 13 Observability: 13-observability/README.md
+  - 14 Distributed Systems: 14-distributed-systems/README.md
+  - 15 Database / Cache / MQ: 15-database-cache-mq/README.md
+  - 16 AI Infra: 16-ai-infra/README.md
+  - 17 System Design: 17-system-design/README.md
+  - 18 Security: 18-security/README.md
+  - 19 Troubleshooting / Performance: 19-troubleshooting-performance/README.md

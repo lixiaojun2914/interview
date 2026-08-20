@@ -1,0 +1,50 @@
+:root {
+  --md-text-font: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --md-code-font: "SFMono-Regular", "JetBrains Mono", monospace;
+}
+
+.md-grid {
+  max-width: 90rem;
+}
+
+.md-content__inner {
+  line-height: 1.75;
+}
+
+.md-typeset table:not([class]) {
+  display: table;
+  width: 100%;
+}
+
+.md-typeset pre > code {
+  max-height: 38rem;
+}
+
+.md-typeset .mermaid {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  background: var(--md-code-bg-color);
+  text-align: center;
+}
+
+.md-typeset .mermaid svg,
+.md-typeset img[src$=".svg"] {
+  min-width: 36rem;
+  max-width: none;
+  height: auto;
+}
+
+@media screen and (max-width: 44.984375em) {
+  .md-typeset table:not([class]) {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .md-typeset .mermaid svg,
+  .md-typeset img[src$=".svg"] {
+    min-width: 44rem;
+  }
+}
